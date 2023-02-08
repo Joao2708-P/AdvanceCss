@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Link rel="stylesheet" href="../../../styles/css/landing.css">
+    <title>Landing</title>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="../../../public/images/logo.png" alt="" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu()"></div>
+                <ul class="navegation">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Wha`s New</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It`s not just Coffee<br>It`s <span>Starbuckd</span></h2>
+                <p>Starbucks specializes in coffee and tea. The brand's classics are coffee mocha, latte, 
+                    espresso topped with milk foam and drinks with whipped cream. On the menu there are also 
+                    sandwiches, muffins and other accompaniments for drinks. Today, the brand has more than 
+                    30,000 stores in 78 countries.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="../../../public/images/img1.png" alt="" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="../../../public/images/thumb1.png"  onclick="imgSlider('../../../public/images/img1.png'); changeCircleColor('#017143')"></li>
+            <li><img src="../../../public/images/thumb2.png"  onclick="imgSlider('../../../public/images/img2.png'); changeCircleColor('#eb7495')"></li>
+            <li><img src="../../../public/images/thumb3.png"  onclick="imgSlider('../../../public/images/img3.png'); changeCircleColor('#d752b1')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="../../../public/images/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="../../../public/images/twitter (1).png" alt=""></a></li>
+            <li><a href="#"><img src="../../../public/images/instagram (1).png" alt=""></a></li>
+        </ul>
+    </section>
+    <script>
+        function imgSlider(anything)
+        {
+            document.querySelector('.starbucks').src = anything
+        }
+
+        function changeCircleColor(color)
+        {
+            const circle = document.querySelector('.circle')
+            circle.style.background = color;
+        }
+
+        function toggleMenu()
+        {
+            var menuToggle = document.querySelector('.toggle');
+            var navegation = document.querySelector('.navegation');
+            menuToggle.classList.toggle('active')
+            navegation.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
